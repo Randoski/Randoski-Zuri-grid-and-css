@@ -21,10 +21,29 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 15px;
     height: 100vh;
+}
+
+nav {
+    margin-bottom: 50px;
+}
+
+nav a {
+    background: #242424;
+    color: var(--paragraph);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 40px;
+}
+
+nav a:hover {
+    color: #242424;
+    border: 1px solid #242424;
+    background: transparent;
 }
 
 .container {
@@ -123,13 +142,28 @@ button {
         font-size: 12px;
         height: auto;
     }
+    
+    nav a {
+        padding: 6px 12px;
+        font-size: 10px;
+    }   
 }
 
 @media (max-width: 525px) {
+    body {
+        height: auto;
+    }
+
+    nav {
+        margin-top: 64px;
+    }
+
     .container {
         flex-direction: column;
+        align-items: center;
         margin: 40px 0;
-        height: auto;
+        /* height: auto; */
+        overflow: hidden;
     }
 
     #sedans, #suvs, #luxury {

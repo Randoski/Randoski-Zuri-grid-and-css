@@ -5,13 +5,35 @@
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
-    align-items: center;
-    justify-items: center;
     background: rgb(8, 8, 41);
 }
+
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+nav {
+    margin: 50px 0 50px;
+    display: grid;
+    justify-content: center;
+}
+
+nav a {
+    background: white;
+    color: var(--paragraph);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 40px;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -50,4 +72,15 @@ body {
 
 .grid-4-2 {
     background-color: rgb(74, 171, 240);
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+
+    nav a {
+        padding: 6px 12px;
+    }
 }
